@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafana Range Searcher</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Grafana Range Searcher</h1>
+
+    <div class="form-row">
+      <div class="form-group form-group-start">
+        <label for="startTime">Start time:</label>
+        <input type="text" id="startTime" placeholder="2026-02-03 11:00:00">
+      </div>
+      <div class="form-group form-group-interval">
+        <label for="interval">Interval:</label>
+        <input type="text" id="interval" placeholder="2h" value="2h">
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="btnApply" class="btn btn-primary">Apply</button>
+      <button id="btnReset" class="btn btn-secondary">Reset</button>
+    </div>
+
+    <div class="current-range" id="currentRange">
+      <span class="label">Current range:</span>
+      <div class="range-values">
+        <span id="rangeFrom">-</span>
+        <span id="rangeTo">-</span>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button id="btnBack" class="btn btn-nav" title="Back">
+        ◀ Back
+      </button>
+      <button id="btnForward" class="btn btn-nav" title="Forward">
+        Forward ▶
+      </button>
+    </div>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
